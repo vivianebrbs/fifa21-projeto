@@ -1,0 +1,14 @@
+{
+  "name": "fifa21-api-blackbox-tests-js",
+  "private": true,
+  "scripts": {
+    "test": "playwright test --reporter=html,line",
+    "test:backend": "playwright test tests/backend --reporter=html,line",
+    "test:frontend": "playwright test tests/frontend --reporter=html,line",
+    "test:frontend:headed": "playwright test tests/frontend --headed --reporter=html,line"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.46.0",
+    "dotenv": "^16.4.5"
+  }
+}
