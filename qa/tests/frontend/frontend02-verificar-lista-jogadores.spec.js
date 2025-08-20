@@ -13,7 +13,8 @@ test.describe('Frontend – Lista de jogadores', () => {
 
     // Aguarda pelo menos 1 jogador na lista
     const players = listContainer.locator('div.player');
-    await expect(players).toHaveCountGreaterThan(0);
+    const count = await players.count();
+    expect(count).toBeGreaterThan(0);
 
     // Verifica alguns nomes conhecidos
     const expectedNames = [
@@ -27,3 +28,4 @@ test.describe('Frontend – Lista de jogadores', () => {
     }
   });
 });
+
